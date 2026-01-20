@@ -209,13 +209,13 @@ readinessProbe:
     path: /api/v1/health
     port: http
 
-resources: {}
-#   limits:
-#     cpu: 100m
-#     memory: 128Mi
-#   requests:
-#     cpu: 100m
-#     memory: 128Mi
+resources:
+  requests:
+    cpu: 50m
+    memory: 100Mi
+  limits:
+    cpu: 100m
+    memory: 200Mi
 
 ## only available if kind is Deployment
 ingress:
