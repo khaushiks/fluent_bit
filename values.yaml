@@ -423,28 +423,28 @@ config:
     [OUTPUT]
         Name es
         Match kube.*
-        Host elasticsearch-master.elasticsearch.svc
+        Host elasticsearch-master
         Port 9200
         Logstash_Format On
         Logstash_Prefix logstash
         Retry_Limit False
-        tls Off
+        tls On
         tls.verify Off
         HTTP_User elastic
-        HTTP_Passwd Fb/es/kibana@123
+        HTTP_Passwd 6DU8sKiZDEd0LIK2
 
     [OUTPUT]
         Name es
         Match host.*
-        Host elasticsearch-master.elasticsearch.svc
+        Host elasticsearch-master
         Port 9200
         Logstash_Format On
         Logstash_Prefix node
         Retry_Limit False
-        tls Off
+        tls On
         tls.verify Off
         HTTP_User elastic
-        HTTP_Passwd Fb/es/kibana@123
+        HTTP_Passwd 6DU8sKiZDEd0LIK2
 
   ## https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/classic-mode/upstream-servers
   ## This configuration is deprecated, please use `extraFiles` instead.
